@@ -1,0 +1,114 @@
+.timer_wrap {
+  width: 90%;
+  margin: 0 auto;
+  font-size: 10px;
+  text-align: center;
+}
+
+/* timer core */
+
+.clock__title {
+  font-size: 1.6em;
+  color: darkslategray;
+  margin-bottom: 0.6em; }
+
+.clock__digits {
+  font-size: 5em;
+  width: 2em;
+  height: 2em;
+  border-radius: 10px;
+  position: relative;
+  display: inline-block;
+  -webkit-perspective: 150px;
+          perspective: 150px;
+  margin-right: 0.5em; }
+  .clock__digits:last-child {
+    margin-right: 0; }
+
+.clock__digits__style {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  z-index: 10;
+  transition: all 0.45s ease-in-out;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  font-size: 0.77em;
+  line-height: 1.3em;
+  box-shadow: 0px 0px 0px 1px #929faf;
+  overflow: hidden; }
+  .clock__digits__style:hover {
+    background: rgba(0, 29, 255, 0.27); }
+  .clock__digits__style div {
+    position: absolute;
+    text-align: center;
+    width: 100%; }
+
+.clock__digits__descr {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  -webkit-transform: translateY(110%);
+      -ms-transform: translateY(110%);
+          transform: translateY(110%);
+  left: 0;
+  font-size: 0.5em; }
+
+.digits__style--lt {
+  background: #c3c7cd;
+  left: 0;
+  top: 0;
+  border-top-left-radius: 10px;
+  -webkit-transform-origin: bottom;
+      -ms-transform-origin: bottom;
+          transform-origin: bottom; }
+  .digits__style--lt div {
+    left: 0;
+    top: 50%; }
+
+.digits__style--rt {
+  background: #edeff2;
+  right: 0;
+  top: 0;
+  border-top-right-radius: 10px;
+  -webkit-transform-origin: bottom;
+      -ms-transform-origin: bottom;
+          transform-origin: bottom; }
+  .digits__style--rt div {
+    left: 0;
+    top: 50%; }
+
+.digits__style--lb {
+  background: #d6d9dd;
+  left: 0;
+  bottom: 0;
+  border-bottom-left-radius: 10px;
+  -webkit-transform-origin: top;
+      -ms-transform-origin: top;
+          transform-origin: top; }
+  .digits__style--lb div {
+    left: 0;
+    bottom: 50%; }
+
+.digits__style--rb {
+  background: #f7f8fa;
+  right: 0;
+  bottom: 0;
+  border-bottom-right-radius: 10px;
+  -webkit-transform-origin: top;
+      -ms-transform-origin: top;
+          transform-origin: top; }
+  .digits__style--rb div {
+    left: 0;
+    bottom: 50%; }
+
+.digits__style--animated_top {
+  -webkit-transform: rotateX(-89deg);
+          transform: rotateX(-89deg);
+  z-index: 20; }
+
+.digits__style--animated_bottom {
+  -webkit-transform: rotateX(89deg);
+          transform: rotateX(89deg);
+  z-index: 20; }
+
