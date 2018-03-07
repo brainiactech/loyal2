@@ -101,6 +101,7 @@ class User2 extends CI_Controller {
     }
   }
 
+  
   public function bitcoinadd()
   {
       $data['bitcoin'] = $this->Bank_Model->getAllBitcoins();
